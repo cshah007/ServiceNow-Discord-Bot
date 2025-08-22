@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ffb1fd451beb2a905f2a3377d34bcb70" label="Discord Chats" max_length="40" name="x_clrp_serviceno_0_discord_chats" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Raw JSON" max_length="8000" name="raw_json" type="string"/>
+        <element label="Message ID" max_length="64" name="message_id" type="string"/>
+        <element label="Author name" max_length="128" name="author_name" type="string"/>
+        <element label="Channel ID" max_length="64" name="channel_id" type="string"/>
+        <element label="Content" max_length="4000" name="content" type="string"/>
+        <element label="Author ID" max_length="64" name="author_id" type="string"/>
+        <element label="Message TS" max_length="40" name="message_ts" type="glide_date_time"/>
+        <element label="Channel name" max_length="128" name="channel_name" type="string"/>
+    </element>
+</database>

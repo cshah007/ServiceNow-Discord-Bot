@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="94c1fd451beb2a905f2a3377d34bcbf2" sys_domain="global" table="x_clrp_serviceno_0_discord_chats" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>chandrakant.shah</sys_created_by>
+            <sys_created_on>2025-08-22 07:20:40</sys_created_on>
+            <sys_id>9cc1fd451beb2a905f2a3377d34bcbf6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_clrp_serviceno_0_discord_chats" sys_domain="global" view="Default view">94c1fd451beb2a905f2a3377d34bcbf2</sys_ui_section>
+            <sys_updated_by>chandrakant.shah</sys_updated_by>
+            <sys_updated_on>2025-08-22 07:20:40</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_clrp_serviceno_0_discord_chats</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>chandrakant.shah</sys_created_by>
+            <sys_created_on>2025-08-22 07:20:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>94c1fd451beb2a905f2a3377d34bcbf2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_clrp_serviceno_0_discord_chats</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ServiceNow Discord Bot" source="x_clrp_serviceno_0">d541b1451beb2a905f2a3377d34bcb83</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ServiceNow Discord Bot">d541b1451beb2a905f2a3377d34bcb83</sys_scope>
+            <sys_update_name>sys_ui_section_94c1fd451beb2a905f2a3377d34bcbf2</sys_update_name>
+            <sys_updated_by>chandrakant.shah</sys_updated_by>
+            <sys_updated_on>2025-08-22 07:20:40</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>Default POST</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+  // Simple API key check
+  var apiKey = request.getHeader("X-API-Key");
+  if (gs.getProperty('x_clrp_serviceno_0.api_key') != apiKey) {
+    response.setStatus(401);
+    return {error: 'Unauthorized'};
+  }
+
+  var body = request.body.dataString;
+  var data;
+  try {
+    data = JSON.parse(body);
+  } catch (e) {
+    response.setStatus(400);
+    return {error: 'Invalid JSON'};
+  }
+
+  // Expect fields from the bot
+  // { message_id, channel_id, channel_name, author_id, author_name, content, message_ts, raw }
+  var gr = new GlideRecord('x_clrp_serviceno_0_discord_chats');
+  gr.initialize();
+  gr.message_id   = data.message_id || '';
+  gr.channel_id   = data.channel_id || '';
+  gr.channel_name = data.channel_name || '';
+  gr.author_id    = data.author_id || '';
+  gr.author_name  = data.author_name || '';
+  gr.content      = data.content || '';
+  gr.message_ts   = data.message_ts || new GlideDateTime();
+  gr.raw_json     = JSON.stringify(data.raw || {});
+  gr.insert();
+
+  response.setStatus(200);
+  return {status: 'ok'};
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_clrp_serviceno_0/discord_ingest</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>chandrakant.shah</sys_created_by>
+        <sys_created_on>2025-08-22 07:37:44</sys_created_on>
+        <sys_id>a29371491beb2a905f2a3377d34bcba4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default POST</sys_name>
+        <sys_package display_value="ServiceNow Discord Bot" source="x_clrp_serviceno_0">d541b1451beb2a905f2a3377d34bcb83</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow Discord Bot">d541b1451beb2a905f2a3377d34bcb83</sys_scope>
+        <sys_update_name>sys_ws_operation_a29371491beb2a905f2a3377d34bcba4</sys_update_name>
+        <sys_updated_by>chandrakant.shah</sys_updated_by>
+        <sys_updated_on>2025-08-22 07:37:44</sys_updated_on>
+        <web_service_definition display_value="Discord Ingest">a2633d091beb2a905f2a3377d34bcb1d</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

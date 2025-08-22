@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="INSERT_OR_UPDATE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_clrp_serviceno_0_discord_chats</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>chandrakant.shah</sys_created_by>
+        <sys_created_on>2025-08-22 07:20:39</sys_created_on>
+        <sys_id>c4c1fd451beb2a905f2a3377d34bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_clrp_serviceno_0_discord_chats</sys_name>
+        <sys_package display_value="ServiceNow Discord Bot" source="x_clrp_serviceno_0">d541b1451beb2a905f2a3377d34bcb83</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow Discord Bot">d541b1451beb2a905f2a3377d34bcb83</sys_scope>
+        <sys_update_name>ua_table_licensing_config_c4c1fd451beb2a905f2a3377d34bcba3</sys_update_name>
+        <sys_updated_by>chandrakant.shah</sys_updated_by>
+        <sys_updated_on>2025-08-22 07:20:39</sys_updated_on>
+    </ua_table_licensing_config>
+</record_update>
